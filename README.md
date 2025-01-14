@@ -1,50 +1,17 @@
-# React + TypeScript + Vite
+This project is a user-friendly platform designed to help users discover, explore, and engage with a variety of recipes. It features multiple interactive pages to enhance the user experience:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Home Page:
+Users can filter recipes based on difficulty level and cuisine type (e.g., Italian, Asian, etc.).
 
-Currently, two official plugins are available:
+A complete list of recipes is available for browsing, showcasing a diverse range of culinary options.
+About Page:
+Provides information about the platform, its purpose, and how it benefits users in exploring and enjoying new recipes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Recipe Details Page:
+When a user clicks on a recipe, a detailed card opens, displaying all the necessary information about the recipe, including ingredients, instructions, and preparation time.
+Users can leave a comment and provide a rating for the recipe.
 
-## Expanding the ESLint configuration
+Email Subscription Page:
+A dedicated page where users can sign up for email updates to stay informed about new recipes, cooking tips, and exclusive content.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+The recipe data used in this project was sourced from https://dummyjson.com/recipes
