@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./recipeCard.module.scss";
 
 interface RecipeCardProps {
   image: string;
@@ -7,21 +8,9 @@ interface RecipeCardProps {
 
 const RecipeCard: React.FC<RecipeCardProps> = ({ image, title }) => {
   return (
-    <div
-      style={{
-        width: "200px",
-        border: "1px solid #ccc",
-        borderRadius: "8px",
-        overflow: "hidden",
-        textAlign: "center",
-      }}
-    >
-      <img
-        src={image}
-        alt={title}
-        style={{ width: "100%", height: "150px", objectFit: "cover" }}
-      />
-      <h3 style={{ padding: "10px", fontSize: "16px" }}>{title}</h3>
+    <div className={styles.card}>
+      <img src={image} alt={title} className={styles.cardImage} />
+      <h3 className={styles.cardTitle}>{title}</h3>
     </div>
   );
 };
