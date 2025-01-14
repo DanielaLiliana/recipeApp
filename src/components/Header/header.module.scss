@@ -1,0 +1,81 @@
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  transition: height 0.2s ease;
+  height: 17vh; /* înlocuit cu unitate relativă */
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  opacity: 0.9;
+  backdrop-filter: saturate(180%) blur(20px);
+  justify-content: space-between;
+  z-index: 1;
+  border-bottom: 1px solid #afacac;
+  padding: 0 5%; /* înlocuit valori fixe cu relative */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 2rem; /* unitate relativă */
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap; /* permite rearanjarea elementelor pe linii noi */
+  margin-right: 10rem;
+}
+
+.navItem {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.2rem; /* unitate relativă */
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navItem:hover {
+  color: #646cff;
+  border-bottom: 2px solid #646cff;
+}
+
+/* Media Queries pentru dimensiuni mai mici */
+@media (max-width: 768px) {
+  .header {
+    height: auto; /* permite înălțime dinamică */
+    flex-direction: column; /* rearanjează header-ul vertical */
+    align-items: flex-start;
+    padding: 10px; /* spațiere mai mică */
+  }
+
+  .navList {
+    gap: 1rem; /* spațiere mai mică între elemente */
+    margin-right: 0; /* elimină margin fix */
+  }
+
+  .navItem {
+    font-size: 1rem; /* ajustează dimensiunea fontului */
+  }
+}
+
+/* Media Queries pentru ecrane foarte mici */
+@media (max-width: 480px) {
+  .header {
+    padding: 5px; /* mai mic spațiu padding */
+  }
+
+  .navList {
+    flex-direction: column; /* face lista verticală */
+    gap: 0.5rem;
+  }
+
+  .navItem {
+    font-size: 0.9rem;
+  }
+}
